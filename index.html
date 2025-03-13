@@ -1,54 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descrição da página principal">
-    <title>Página Principal</title>
+    <title>Portfólio de Flávio Farias Bernadino</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Flávio Farias Bernadino -->
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Botão de Alternância de Modo Escuro -->
+    <button id="theme-toggle" class="fixed top-4 right-4 p-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+        🌓
+    </button>
+
     <!-- Cabeçalho -->
-    <header class="bg-blue-600 text-white p-4">
-        <h1 class="text-2xl font-bold">Meu Site</h1>
+    <header class="bg-blue-600 text-white p-4 dark:bg-gray-800">
+        <h1 class="text-2xl font-bold">Portfólio de Flávio Farias Bernadino</h1>
     </header>
 
     <!-- Navegação -->
-    <nav class="bg-blue-500 p-2">
+    <nav class="bg-blue-500 p-2 dark:bg-gray-700">
         <ul class="flex space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-200">Home</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Sobre</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Serviços</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Contato</a></li>
+            <li><a href="#sobre" class="text-white hover:text-gray-200">Sobre</a></li>
+            <li><a href="#projetos" class="text-white hover:text-gray-200">Projetos</a></li>
+            <li><a href="#habilidades" class="text-white hover:text-gray-200">Habilidades</a></li>
+            <li><a href="#contato" class="text-white hover:text-gray-200">Contato</a></li>
         </ul>
     </nav>
 
     <!-- Conteúdo Principal -->
     <main class="p-4">
-        <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-2">Bem-vindo ao Meu Site</h2>
-            <p class="text-gray-700">Este é um exemplo de página principal usando Tailwind CSS.</p>
+        <!-- Sobre Mim -->
+        <section id="sobre" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Sobre Mim</h2>
+            <div class="flex items-center">
+                <img src="https://avatars.githubusercontent.com/u/34287888?v=4" alt="Foto de Flávio Farias Bernadino" class="w-24 h-24 rounded-full mr-4">
+                <p class="text-gray-700 dark:text-gray-300">
+                    Olá! Meu nome é Flávio Farias Bernadino, tenho 24 anos e sou um programador full stack com experiência em desenvolvimento web e criação de jogos. 
+                    Possuo conhecimentos em linguagens como Java, C#, JavaScript e TypeScript, além de frameworks como Spring, Angular e React. 
+                    Sou apaixonado por resolver problemas complexos e criar soluções inovadoras que impactam positivamente os usuários.
+                </p>
+            </div>
         </section>
 
-        <article class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-lg font-semibold mb-2">Artigo de Exemplo</h3>
-            <p class="text-gray-700">Este é um artigo de exemplo com algumas informações relevantes.</p>
-            <img src="https://via.placeholder.com/400" alt="Imagem de exemplo" class="mt-4 rounded-lg">
-        </article>
+        <!-- Projetos Destacados -->
+        <section id="projetos" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Projetos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Ploct -->
+                <article class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">Ploct – Jogo 2D de Plataforma</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Desenvolvi as mecânicas principais de um jogo de plataforma 2D utilizando C# e Unity, incluindo sistemas de movimentação, grappling hook e interações com o cenário. 
+                        O projeto recebeu destaque na Universidade SENAC e foi selecionado para exposição na maior feira de games da América Latina. 
+                        O jogo atraiu grande interesse do público, resultando em entrevistas para portais renomados como o UOL Tilt.
+                    </p>
+                    <a href="https://ofurabio.itch.io/ploct" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Jogue agora no Itch.io</a>
+                </article>
+
+                <!-- MercaDela -->
+                <article class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">MercaDela – E-commerce em Java e React</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Desenvolvimento de um e-commerce full stack durante o bootcamp da ONG internacional Generation. 
+                        O projeto foi desenvolvido em equipe, utilizando Java com Spring Boot no back-end, React no front-end e MySQL com Docker para o banco de dados. 
+                        Fui responsável pela implementação das principais funcionalidades do back-end, incluindo operações CRUD, autenticação de usuários com JWT e otimização de consultas. 
+                        Aplicamos os princípios SOLID na arquitetura, realizamos testes automatizados com JUnit e utilizamos Git para versionamento de código. 
+                        O deploy foi realizado no Render para o back-end, com conteinerização via Docker, e Vercel para o front-end.
+                    </p>
+                    <a href="https://mercadela.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Visite o site</a>
+                </article>
+
+                <!-- Oscar Voting -->
+                <article class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">Oscar Voting - Em desenvolvimento</h3>
+                    <p class="text-gray-700 dark:text-gray-300 mb-4">
+                        Percebendo que, diferente de outras premiações, o Oscar não conta com uma plataforma para votação do público, estou desenvolvendo uma aplicação web que permite aos usuários votar nos indicados. 
+                        O back-end, desenvolvido em Java com Spring, já está em deploy no Render. 
+                        Atualmente, estou atualizando o front-end utilizando React e TypeScript, com deploy no Vercel. 
+                        O projeto visa proporcionar uma experiência interativa e inclusiva para os fãs de cinema.
+                    </p>
+                    <a href="https://oscarvoting.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Visite o site</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Habilidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">Linguagens</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+                        <li>Java</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">Frameworks e Bibliotecas</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+                        <li>Spring</li>
+                        <li>Angular</li>
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                    <h3 class="text-xl font-semibold mb-2">Banco de Dados e Ferramentas</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>Firebase</li>
+                        <li>Docker</li>
+                        <li>Git</li>
+                        <li>Jira</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">Contato</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800">
+                <p class="text-gray-700 dark:text-gray-300 mb-4">Entre em contato comigo através das minhas redes sociais ou envie uma mensagem diretamente:</p>
+                <ul class="space-y-2">
+                    <li><a href="https://ofurabio.itch.io/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Itch.io</a></li>
+                    <li><a href="https://www.linkedin.com/in/flaviosfarias/" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">LinkedIn</a></li>
+                    <li><a href="https://github.com/oFurabio" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <!-- Barra Lateral (Opcional) -->
-    <aside class="bg-blue-100 p-4">
-        <h4 class="font-semibold mb-2">Links Úteis</h4>
-        <ul>
-            <li><a href="#" class="text-blue-600 hover:text-blue-800">Link 1</a></li>
-            <li><a href="#" class="text-blue-600 hover:text-blue-800">Link 2</a></li>
-        </ul>
-    </aside>
-
     <!-- Rodapé -->
-    <footer class="bg-blue-600 text-white p-4 mt-8">
-        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
+    <footer class="bg-blue-600 text-white p-4 mt-8 dark:bg-gray-800">
+        <p>&copy; 2023 Flávio Farias Bernadino. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Script para Alternar Modo Escuro -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // Verificar preferência do usuário no localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        // Alternar entre modos
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            const isDarkMode = htmlElement.classList.contains('dark');
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        });
+    </script>
 </body>
 </html>
